@@ -4,6 +4,16 @@ export const siteConfig = {
   description:
     "Tan Le’s portfolio — software engineering, full-stack development, and AI-powered applications.",
   accentColor: "#1d4ed8",
+  hero: {
+    greeting: "Hello, I’m",
+    introduction:
+      "I love building software, exploring data, and solving problems with people.",
+    availability: "Open to engineering & data roles",
+    portrait: "linkedIn image.jpeg",
+    portraitAlt: "Portrait of Tan Le",
+    projectsLabel: "View projects",
+    contactLabel: "Get in touch",
+  },
   social: {
     email: "letan101104@gmail.com",
     linkedin: "https://www.linkedin.com/in/tanle004/",
@@ -52,7 +62,7 @@ export const siteConfig = {
       name: "HazardHub",
       description:
         "A mobile-first platform for crowdsourced road-hazard reporting and safety-based routing. Combines geospatial search and SOS features with Gemini image classification and community validation.",
-      link: "",
+      link: "https://github.com/LTan-101104/HazardHub",
       skills: [
         "Next.js",
         "React",
@@ -74,7 +84,7 @@ export const siteConfig = {
       name: "Aarti App",
       description:
         "A women’s rights educational mobile app developed for Vijay Foundation Trust, featuring interactive quizzes and a web admin dashboard for managing content.",
-      link: "",
+      link: "https://github.com/build-umass/aarti-app",
       skills: ["Express.js", "MongoDB", "Next.js", "React Native"],
     },
   ],
