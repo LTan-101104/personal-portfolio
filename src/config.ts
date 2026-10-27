@@ -1,3 +1,20 @@
+export type ProjectMedia = {
+  src: string;
+  alt: string;
+  type?: "image" | "video";
+  caption?: string;
+  poster?: string;
+};
+
+type Project = {
+  name: string;
+  description: string;
+  highlights?: string[];
+  link: string;
+  skills: string[];
+  media?: ProjectMedia[];
+};
+
 export const siteConfig = {
   name: "Tan Le",
   title: "Software Engineer",
@@ -59,9 +76,34 @@ export const siteConfig = {
   ],
   projects: [
     {
+      name: "Homie",
+      description:
+        "An Alexa+-oriented memory assistant built for the Amazon Developer Hackathon.",
+      highlights: [
+        "Built an authenticated FastAPI MCP server exposing remember, recall, and forget tools through stateless Streamable HTTP, with DynamoDB-backed memory.",
+        "Developed a mobile-first Next.js PWA for private memory and media management with Cognito-scoped access, signed S3 uploads, idempotent writes, rate limits, and an offline fallback that never caches private data.",
+        "Implemented a Bedrock-powered web simulator that invokes the MCP endpoint as an authenticated client and displays tool activity, bounding agent behavior to three model rounds and four tool calls per request.",
+      ],
+      link: "https://github.com/dntrAnh/homie",
+      skills: [
+        "Python",
+        "FastAPI",
+        "MCP",
+        "Next.js",
+        "AWS Bedrock",
+        "DynamoDB",
+        "S3",
+        "Cognito",
+      ],
+    },
+    {
       name: "HazardHub",
       description:
-        "A mobile-first platform for crowdsourced road-hazard reporting and safety-based routing. Combines geospatial search and SOS features with Gemini image classification and community validation.",
+        "A full-stack, mobile-first platform for crowdsourced road-hazard reporting and safety-based routing.",
+      highlights: [
+        "Optimized backend performance with geospatial indexing and query tuning to enable fast proximity search and SOS features.",
+        "Architected a human-in-the-loop hazard pipeline combining Gemini 2.0 image classification with community validation before reports influence routing.",
+      ],
       link: "https://github.com/LTan-101104/HazardHub",
       skills: [
         "Next.js",
@@ -87,7 +129,7 @@ export const siteConfig = {
       link: "https://github.com/build-umass/aarti-app",
       skills: ["Express.js", "MongoDB", "Next.js", "React Native"],
     },
-  ],
+  ] as Project[],
   experience: [
     {
       company: "Magical",
